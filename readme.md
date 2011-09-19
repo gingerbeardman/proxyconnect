@@ -12,7 +12,9 @@ Contains plugin and helper file.
 
 Requires the Registered Users plugin to be installed.
 
-Requires the cookie domain/path in AuthUser on lines 219, 294 to include both your forum and wolf paths
+Requires the cookie domain/path in wolf/app/models/AuthUser.php on lines 219, 294 to include both your forum and wolf paths. 
+
+The domains used for cookies must be dotted domains, as shown in the example code, as localhost will not work. You may also wish to use `'.'.$_SERVER["HTTP_HOST"]` rather than `null` in these bits of code.
 
 ## INSTALLATION
 
